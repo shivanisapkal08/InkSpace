@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>InkSpace – Your Creative Blogging Platform</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Internal CSS -->
+  <style>
+    .hero-section {
+      background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+      color: #fff;
+      padding: 80px 40px;
+      text-align: center;
+    }
+    .hero-section h1 {
+      font-size: 3.5rem;
+      font-family: 'Georgia', serif;
+      margin-bottom: 10px;
+      letter-spacing: 3px;
+    }
+    .hero-section p {
+      font-size: 1.2rem;
+      color: #e2b96f;
+    }
+    .nav-bar {
+      background: #0f3460;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-bar .logo {
+      color: #e2b96f;
+      font-size: 1.8rem;
+      font-weight: bold;
+      text-decoration: none;
+      font-family: 'Georgia', serif;
+    }
+    .nav-bar ul {
+      list-style: none;
+      display: flex;
+      gap: 24px;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-bar ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+    .nav-bar ul li a:hover { color: #e2b96f; }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      color: #0f3460;
+      margin: 40px 0 20px;
+      font-family: 'Georgia', serif;
+    }
+    .blog-table {
+      width: 90%;
+      margin: 0 auto 40px;
+      border-collapse: collapse;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .blog-table th {
+      background: #0f3460;
+      color: #e2b96f;
+      padding: 14px 18px;
+      text-align: left;
+    }
+    .blog-table td {
+      padding: 12px 18px;
+      border-bottom: 1px solid #ddd;
+      color: #333;
+    }
+    .blog-table tr:nth-child(even) { background: #f0f4ff; }
+    .blog-table tr:hover { background: #dbe4ff; }
+
+    .contact-form {
+      width: 50%;
+      margin: 0 auto 60px;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form select {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0 18px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+    .contact-form button {
+      background: #0f3460;
+      color: #fff;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+    .contact-form button:hover { background: #e2b96f; color: #0f3460; }
+
+    .categories-list {
+      width: 90%;
+      margin: 0 auto 40px;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .categories-list li {
+      background: #0f3460;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 20px;
+      list-style: none;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      background: #1a1a2e;
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="nav-bar">
+    <a class="logo" href="#">✒ InkSpace</a>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#blogs">Blogs</a></li>
+      <li><a href="calculator.html">Calculator</a></li>
+      <li><a href="php/blogs.php">Manage Blogs</a></li>
+      <li><a href="angular/index.html">Register</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section (Inline CSS example) -->
+  <div class="hero-section">
+    <h1 style="text-shadow: 2px 2px 8px rgba(226,185,111,0.5);">✒ InkSpace</h1>
+    <p style="margin-top: 10px; font-style: italic;">
+      Where Stories Come to Life — Write, Share, Inspire
+    </p>
+    <a href="angular/index.html"
+       style="display:inline-block; margin-top:30px; padding:14px 36px;
+              background:#e2b96f; color:#1a1a2e; border-radius:30px;
+              text-decoration:none; font-weight:bold; font-size:1.1rem;">
+      Start Writing Today
+    </a>
+  </div>
+
+  <!-- Image Banner -->
+  <div style="text-align:center; padding:30px; background:#f9f9fb;">
+    <img src="[via.placeholder.com](https://via.placeholder.com/900x200/0f3460/e2b96f?text=InkSpace+Blog+Platform)"
+         alt="InkSpace Banner"
+         style="border-radius:12px; max-width:90%; box-shadow:0 4px 15px rgba(0,0,0,0.2);" />
+  </div>
+
+  <!-- Blog Categories (Unordered List) -->
+  <h2 class="section-title">Explore Categories</h2>
+  <ul class="categories-list">
+    <li>📝 Writing Tips</li>
+    <li>💻 Technology</li>
+    <li>🌍 Travel</li>
+    <li>🍕 Food</li>
+    <li>🎨 Creative Arts</li>
+    <li>📚 Book Reviews</li>
+    <li>🧠 Self Improvement</li>
+  </ul>
+
+  <!-- Blog Table (Assignment: Tables) -->
+  <h2 class="section-title" id="blogs">Latest Blogs</h2>
+  <table class="blog-table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Category</th>
+        <th>Date</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td><a href="#">Getting Started with InkSpace</a></td>
+        <td>Admin</td>
+        <td>Tech</td>
+        <td>2026-04-01</td>
+        <td><a href="php/blogs.php">Read More</a></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><a href="#">Top 10 Writing Tips</a></td>
+        <td>Jane Doe</td>
+        <td>Writing</td>
+        <td>2026-04-10</td>
+        <td><a href="php/blogs.php">Read More</a></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><a href="#">The Future of AI</a></td>
+        <td>John Smith</td>
+        <td>Technology</td>
+        <td>2026-04-18</td>
+        <td><a href="php/blogs.php">Read More</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Ordered List of Writing Steps -->
+  <h2 class="section-title">How InkSpace Works</h2>
+  <div style="width:60%; margin:0 auto 40px; background:#fff;
+              padding:30px; border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,0.08);">
+    <ol style="font-size:1.05rem; line-height:2; color:#333;">
+      <li>Register your free account on InkSpace.</li>
+      <li>Log in using your credentials.</li>
+      <li>Click <strong>"New Blog"</strong> to start writing.</li>
+      <li>Add a title, category, and your content.</li>
+      <li>Preview and publish your blog post.</li>
+      <li>Share with the world and collect comments!</li>
+    </ol>
+  </div>
+
+  <!-- Contact Form (Assignment: Forms) -->
+  <h2 class="section-title" id="contact">Contact Us</h2>
+  <div class="contact-form">
+    <form onsubmit="return validateContactForm()">
+      <label for="name"><strong>Full Name</strong></label>
+      <input type="text" id="name" name="name" placeholder="Enter your full name" />
+
+      <label for="email"><strong>Email Address</strong></label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" />
+
+      <label for="mobile"><strong>Mobile Number</strong></label>
+      <input type="tel" id="mobile" name="mobile" placeholder="Enter 10-digit mobile" />
+
+      <label for="category"><strong>Query Category</strong></label>
+      <select id="category" name="category">
+        <option value="">-- Select --</option>
+        <option value="general">General Inquiry</option>
+        <option value="technical">Technical Support</option>
+        <option value="feedback">Feedback</option>
+      </select>
+
+      <label for="message"><strong>Message</strong></label>
+      <textarea id="message" name="message" rows="5"
+                placeholder="Write your message here..."></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <!-- Iframe embed example (Frames assignment) -->
+  <h2 class="section-title">InkSpace Calculator</h2>
+  <div style="text-align:center; margin-bottom:50px;">
+    <iframe src="calculator.html" width="420" height="550"
+            style="border:none; border-radius:16px;
+                   box-shadow:0 8px 30px rgba(0,0,0,0.15);">
+    </iframe>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 InkSpace. All rights reserved. | 
+       <a href="#" style="color:#e2b96f;">Privacy Policy</a> | 
+       <a href="#" style="color:#e2b96f;">Terms of Service</a>
+    </p>
+  </footer>
+
+  <!-- JavaScript Validation -->
+  <script>
+    function validateContactForm() {
+      const name     = document.getElementById('name').value.trim();
+      const email    = document.getElementById('email').value.trim();
+      const mobile   = document.getElementById('mobile').value.trim();
+      const message  = document.getElementById('message').value.trim();
+
+      if (!name || !email || !mobile || !message) {
+        alert('⚠ Please fill in all required fields.');
+        return false;
+      }
+      const nameRegex   = /^[A-Za-z\s]{3,}$/;
+      const emailRegex  = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const mobileRegex = /^[6-9]\d{9}$/;
+
+      if (!nameRegex.test(name)) {
+        alert('⚠ Name must contain only letters and be at least 3 characters.');
+        return false;
+      }
+      if (!emailRegex.test(email)) {
+        alert('⚠ Please enter a valid email address.');
+        return false;
+      }
+      if (!mobileRegex.test(mobile)) {
+        alert('⚠ Mobile must be a valid 10-digit Indian number starting with 6–9.');
+        return false;
+      }
+      alert('✅ Thank you! Your message has been sent successfully.');
+      return true;
+    }
+  </script>
+</body>
+</html>

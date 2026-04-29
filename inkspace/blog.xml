@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE employees SYSTEM "blog.dtd">
+<?xml-stylesheet type="text/xsl" href="blog.xsl"?>
+<employees>
+
+  <employee status="active">
+    <emp_id>101</emp_id>
+    <name>Alice Johnson</name>
+    <department>Content</department>
+    <designation>Senior Writer</designation>
+    <email>alice@inkspace.com</email>
+    <salary>75000</salary>
+    <blog_count>42</blog_count>
+  </employee>
+
+  <employee status="active">
+    <emp_id>102</emp_id>
+    <name>Bob Smith</name>
+    <department>Technology</department>
+    <designation>Backend Developer</designation>
+    <email>bob@inkspace.com</email>
+    <salary>90000</salary>
+    <blog_count>18</blog_count>
+  </employee>
+
+  <employee status="inactive">
+    <emp_id>103</emp_id>
+    <name>Carol White</name>
+    <department>Design</department>
+    <designation>UI/UX Designer</designation>
+    <email>carol@inkspace.com</email>
+    <salary>68000</salary>
+    <blog_count>27</blog_count>
+  </employee>
+
+  <employee status="active">
+    <emp_id>104</emp_id>
+    <name>David Lee</name>
+    <department>Marketing</department>
+    <designation>SEO Specialist</designation>
+    <email>david@inkspace.com</email>
+    <salary>60000</salary>
+    <blog_count>55</blog_count>
+  </employee>
+
+</employees>

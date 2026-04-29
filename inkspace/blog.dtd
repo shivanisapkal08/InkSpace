@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT employees (employee+)>
+<!ELEMENT employee (emp_id, name, department, designation, email, salary, blog_count)>
+<!ELEMENT emp_id       (#PCDATA)>
+<!ELEMENT name         (#PCDATA)>
+<!ELEMENT department   (#PCDATA)>
+<!ELEMENT designation  (#PCDATA)>
+<!ELEMENT email        (#PCDATA)>
+<!ELEMENT salary       (#PCDATA)>
+<!ELEMENT blog_count   (#PCDATA)>
+<!ATTLIST employee status (active|inactive) "active">
